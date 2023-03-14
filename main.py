@@ -12,9 +12,11 @@ app = FastAPI(root_path=root)
 async def create_file(request: Request):
     payload = await request.json()
 
-    with open("data.json", "r") as file:
-        try: data = json.load(file) or []
-        except: data = []
+    try:
+        with open("data.json", "r") as file:
+            data = json.load(file) or []
+    except:
+        data = []
 
     with open("data.json", "w") as file:
         data.append(payload)
