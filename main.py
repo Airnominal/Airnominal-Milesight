@@ -118,7 +118,7 @@ async def submit(payload: MilesightRawPayload, credentials: HTTPBasicCredentials
 
     print("Message", message, file=sys.stderr)
 
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(timeout=30) as client:
         response = await client.post(CONFIG_API, json={"data": message})
         print("Response", response, file=sys.stderr)
 

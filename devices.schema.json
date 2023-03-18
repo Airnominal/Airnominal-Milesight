@@ -12,26 +12,22 @@
         "battery": {
           "title": "Battery",
           "description": "Battery Sensor ID",
-          "type": "string",
-          "format": "binary"
+          "type": "string"
         },
         "temperature": {
           "title": "Temperature",
           "description": "Temperature Sensor ID",
-          "type": "string",
-          "format": "binary"
+          "type": "string"
         },
         "humidity": {
           "title": "Humidity",
           "description": "Humidity Sensor ID",
-          "type": "string",
-          "format": "binary"
+          "type": "string"
         },
         "co2": {
           "title": "CO2",
           "description": "CO2 Sensor ID",
-          "type": "string",
-          "format": "binary"
+          "type": "string"
         }
       },
       "required": [
@@ -48,20 +44,22 @@
         "deveui": {
           "title": "DevEUI",
           "description": "LoRaWAN Device EUI",
-          "type": "string",
-          "format": "binary"
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "description": "Airnominal Station Name",
+          "type": "string"
         },
         "uuid": {
           "title": "UUID",
           "description": "Airnominal Station ID",
-          "type": "string",
-          "format": "binary"
+          "type": "string"
         },
         "token": {
           "title": "Token",
           "description": "Airnominal Station Token",
-          "type": "string",
-          "format": "binary"
+          "type": "string"
         },
         "lat": {
           "title": "Latitude",
@@ -80,6 +78,7 @@
       },
       "required": [
         "deveui",
+        "name",
         "uuid",
         "token",
         "lat",

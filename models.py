@@ -21,6 +21,9 @@ class DeviceConfig(BaseModel):
     deveui: str
     """LoRaWAN Device EUI"""
 
+    name: str
+    """Airnominal Station Name"""
+
     uuid: str
     """Airnominal Station ID"""
 
