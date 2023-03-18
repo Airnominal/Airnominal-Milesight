@@ -1,0 +1,91 @@
+{
+  "title": "Milesight Device Config",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/definitions/DeviceConfig"
+  },
+  "definitions": {
+    "DeviceSensors": {
+      "title": "DeviceSensors",
+      "type": "object",
+      "properties": {
+        "battery": {
+          "title": "Battery",
+          "description": "Battery Sensor ID",
+          "type": "string",
+          "format": "binary"
+        },
+        "temperature": {
+          "title": "Temperature",
+          "description": "Temperature Sensor ID",
+          "type": "string",
+          "format": "binary"
+        },
+        "humidity": {
+          "title": "Humidity",
+          "description": "Humidity Sensor ID",
+          "type": "string",
+          "format": "binary"
+        },
+        "co2": {
+          "title": "CO2",
+          "description": "CO2 Sensor ID",
+          "type": "string",
+          "format": "binary"
+        }
+      },
+      "required": [
+        "battery",
+        "temperature",
+        "humidity",
+        "co2"
+      ]
+    },
+    "DeviceConfig": {
+      "title": "DeviceConfig",
+      "type": "object",
+      "properties": {
+        "deveui": {
+          "title": "DevEUI",
+          "description": "LoRaWAN Device EUI",
+          "type": "string",
+          "format": "binary"
+        },
+        "uuid": {
+          "title": "UUID",
+          "description": "Airnominal Station ID",
+          "type": "string",
+          "format": "binary"
+        },
+        "token": {
+          "title": "Token",
+          "description": "Airnominal Station Token",
+          "type": "string",
+          "format": "binary"
+        },
+        "lat": {
+          "title": "Latitude",
+          "description": "Airnominal Station Latitude",
+          "type": "number"
+        },
+        "lon": {
+          "title": "Longitude",
+          "description": "Airnominal Station Longitude",
+          "type": "number"
+        },
+        "sensors": {
+          "$ref": "#/definitions/DeviceSensors",
+          "description": "Airnominal Sensor Short IDs"
+        }
+      },
+      "required": [
+        "deveui",
+        "uuid",
+        "token",
+        "lat",
+        "lon",
+        "sensors"
+      ]
+    }
+  }
+}

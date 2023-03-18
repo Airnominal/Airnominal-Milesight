@@ -43,3 +43,4 @@ poetry/core/*
 .env
 
 data.json
+devices.json
